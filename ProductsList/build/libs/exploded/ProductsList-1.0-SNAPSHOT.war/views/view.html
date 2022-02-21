@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<body>
+<div th:if="${product != null}">
+    <table id="products">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td th:text="${product.getName()}"></td>
+            <td th:text="${product.getPrice()}"></td>
+            <td th:text="${product.getDescription()}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div th:unless="${product != null}">
+    <p>Hello Anh em</p>
+</div>
+</body>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>
