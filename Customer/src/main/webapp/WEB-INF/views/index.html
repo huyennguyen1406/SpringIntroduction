@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="/layout :: head">
+<head  th:replace="/layout :: head">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
@@ -11,7 +11,11 @@
         Add new customer
     </a>
 </p>
-
+<div class="notify">
+    <div th:if="${success}">
+        <span th:text="${success}"></span>
+    </div>
+</div>
 <table id = "customers">
     <thead>
     <tr>
